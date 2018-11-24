@@ -1,0 +1,11 @@
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+}
+
+svg.equal-housing{
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}

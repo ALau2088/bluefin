@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div.cities {
+  
+}
+
+section {
+  display: block;
+  width: 1240px;
+  margin: 0 auto;
+  padding: 4rem 10px;
+}
+
+ul.city-list {
+  column-count: 6;
+  column-gap: 1.5rem;
+}
+
+li.city {
+  list-style: none;
+}
+
+li.city a {
+  font-family: Libre-Franklin;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.search-city, .search-state {
+  color:#000000;
+  font-size: 18.72px;
+  font-weight: 700;
+  text-decoration: none;
+}

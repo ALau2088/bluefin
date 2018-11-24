@@ -1,0 +1,113 @@
+/*main navigation*/
+.main-nav {
+  color: white;
+  display: flex;
+  width: 100%;
+}
+
+nav ul li {
+  display: inline-flex;
+}
+
+.header-left {
+  flex: 1;
+  width: 600px;
+  /*flex-shrink: 3;*/
+}
+
+.header-left li {
+  padding: 5px;
+}
+
+.header-right {
+  flex: 8;
+  justify-items: end;
+  font-family: Libre Franklin, sans-serif;
+  width: 900px;
+}
+
+.header-right ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.header-right li {
+  display: inline-block;
+  padding: 10px 20px;
+  position: static;
+}
+
+.buy ul {
+  display: none;
+}
+.buy:hover ul { 
+  display: block;
+  position: fixed;
+  border: 1px solid #000000;
+  top: 130px;
+  right: 405px;
+  width: 245px;
+  box-sizing: border-box;
+  background-color: #ccc;
+}
+
+.buy:hover ul:after {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 1px solid #000000;
+  border-right: 0px solid #000000;
+  border-bottom: 0px solid #000000;
+  border-left: 1px solid #000000;
+  content: '';
+  bottom: 100%;
+  left: 75%;
+  transform: rotate(45deg);
+  margin-bottom: -10px;
+  background-color: #ccc;
+}
+
+.sell ul {
+  display: none;
+}
+
+.sell:hover ul { 
+  display: block;
+  position: fixed;
+  border: 1px solid #000000;
+  top: 130px;
+  right: 345px;
+  width: 250px;
+  box-sizing: border-box;
+  background-color: #ccc;
+}
+
+.sell:hover ul:after {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 1px solid #000000;
+  border-right: 0px solid #000000;
+  border-bottom: 0px solid #000000;
+  border-left: 1px solid #000000;
+  content: '';
+  bottom: 100%;
+  left: 75%;
+  transform: rotate(45deg);
+  margin-bottom: -10px;
+  background-color: #ccc;
+}
+
+.button {
+  background-color: transparent;
+  padding: 5px 5px;
+  border: 1px solid #ccc;
+  color: white;
+}
+
+@media (max-width: 760px) {
+  .header-right ul li {
+    display: none;
+  }
+}
