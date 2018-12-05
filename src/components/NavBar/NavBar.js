@@ -2,13 +2,46 @@ import React from "react";
 import "./NavBar.css";
 
 class NavBar extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.openSlideMenu = this.openSlideMenu.bind(this);
+    this.closeSlideMenu = this.closeSlideMenu.bind(this);
+
+    this.sideNav = React.createRef();
+  } 
+
+  openSlideMenu() {
+    
+    console.log("test");
+    console.log(this.sideNav.current.id);
+    document.getElementById(this.sideNav.current.id).style.width = "250px";
+  }
+
+  closeSlideMenu() {
+    // console.log("test");
+    // console.log(this.sideNav.current.id);
+    document.getElementById(this.sideNav.current.id).style.width = "0px";
+  }
+  
   render() {
+    const divStyle = window.outerHeight;
+    console.log(divStyle)
     return (
       <div className="NavBar">
         <nav className="main-nav">
           <div className="header-left">
             <ul>
               <li>
+              <span className="open-slide">
+                <p className="burgerMenu" onClick={this.openSlideMenu}>
+                  <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#fff" strokeWidth="5"/>
+                    <path d="M0,14 30,14" stroke="#fff" strokeWidth="5"/>
+                    <path d="M0,23 30,23" stroke="#fff" strokeWidth="5"/>
+                  </svg>
+                </p>
+              </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="110"
@@ -82,6 +115,17 @@ class NavBar extends React.Component {
             </ul>
           </div>
         </nav>
+        {/*side navigation*/}
+        <div id = "side-nav" className="side-nav" style={{height: divStyle}} ref = { this.sideNav } >
+        {/*<div id="Menu" className="Menu">*/}
+          <p className="btn-close" onClick={this.closeSlideMenu}>
+            &times;
+          </p>
+          <a href="">Buy</a>
+          <a href="">Sell</a>
+          <a href="">Real Estate Agents</a>
+          <a href="">Sign Up</a> 
+        </div>
       </div>
     );
   }

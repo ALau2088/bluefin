@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import SideMenu from "./components/SideMenu/SideMenu";
 import NavBar from "./components/NavBar/NavBar";
 import SearchBar from "./components/SearchBar/SearchBar";
 import WhyRedfin from "./components/WhyRedfin/WhyRedfin";
@@ -11,13 +10,12 @@ import Footer from "./components/Footer/Footer";
 
 class App extends Component {
   render() {
-    return (
+    return (     
       <div className="App">
-        <SideMenu />
-      <div className="background">  
-        <NavBar />
-        <SearchBar />
-      </div>
+        <div className="background">  
+          <NavBar />
+          <SearchBar />
+        </div>
         <WhyRedfin />
         <Consult />
         <MarketSections />

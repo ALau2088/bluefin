@@ -1,0 +1,54 @@
+.Savings {
+  display: block;
+  background-color: #f2f2f2;
+}
+
+.Savings .container {
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles*/
+  appearance: none;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none; /* Remove outline */
+}
+
+/* The slider handle */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default CSS styles*/
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgb(50,120,160);
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 10px rgba(50,120,160, 0.2);
+}
+
+.slider-arrow-left, .slider-arrow-right {
+  margin-top:-8px;
+  border: solid #0c82a5;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+}
+
+.slider-arrow {
+  position: absolute;
+  z-index: 1;
+}
+
+.slider-arrow-left {
+  left:45%;
+}
+
+.slider-arrow-right {
+  right: 47%;
+}

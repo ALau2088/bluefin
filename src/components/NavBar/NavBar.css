@@ -1,3 +1,42 @@
+/*Mobile Menu*/
+.open-slide {
+  color: white;
+}
+
+@media (min-width: 760px) {
+  .open-slide {
+   display: none;
+  }
+}
+
+/*Side Menu*/
+.side-nav {
+  position: fixed;
+  width: 0px;
+  background-color: rgba(255,255,255,0.5);
+  z-index: 5;
+  top: 0px;
+  padding-top: 60px;
+  overflow-x: hidden;
+}
+div.side-nav a, .side-nav p {
+  display: block;
+  color: white;
+}
+
+p.btn-close {
+  left: 225px;
+}
+
+p.btn-close:hover, p.burgerMenu:hover {
+  cursor: pointer;
+}
+
+.side-nav, .btn-close {
+  position: absolute;
+  top: 0px;
+}
+
 /*main navigation*/
 .main-nav {
   color: white;
@@ -45,7 +84,7 @@ nav ul li {
   display: block;
   position: fixed;
   border: 1px solid #000000;
-  top: 130px;
+  top: 35px;
   right: 405px;
   width: 245px;
   box-sizing: border-box;
@@ -76,7 +115,7 @@ nav ul li {
   display: block;
   position: fixed;
   border: 1px solid #000000;
-  top: 130px;
+  top: 35px;
   right: 345px;
   width: 250px;
   box-sizing: border-box;
