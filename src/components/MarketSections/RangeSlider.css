@@ -3,10 +3,15 @@
   background-color: #f2f2f2;
 }
 
-.Savings .container {
+#sliderStatus {
+  text-align: center;
+}
+
+.container {
   width: 500px;
   margin: auto;
   padding: 20px;
+  text-align: center;
 }
 
 /* The slider itself */
@@ -19,7 +24,7 @@
   outline: none; /* Remove outline */
 }
 
-/* The slider handle */
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default CSS styles*/
   appearance: none;
@@ -32,7 +37,7 @@
 }
 
 .slider-arrow-left, .slider-arrow-right {
-  margin-top:-8px;
+  margin-top:-2px;
   border: solid #0c82a5;
   border-width: 0 2px 2px 0;
   display: inline-block;
@@ -46,9 +51,51 @@
 }
 
 .slider-arrow-left {
-  left:45%;
+  left:47.5%;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  animation: arrow-animation-left 2s infinite ease-in-out;
+  -webkit-animation: arrow-animation-left 2s infinite ease-in-out;
+}
+
+@keyframes arrow-animation-left {
+  0% {
+    margin-left: 8px;
+    opacity: 0;
+  }
+
+  90% {
+    margin-left: -0px;
+    opacity: 1;
+  }
+
+  100% {
+    margin-left: -5px;
+    opacity: 0;
+  }
 }
 
 .slider-arrow-right {
-  right: 47%;
+  right: 47.75%;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  animation: arrow-animation-right 2s infinite ease-in-out;
+  -webkit-animation: arrow-animation-right 2s infinite ease-in-out;
+}
+
+@keyframes arrow-animation-right {
+  0% {
+    margin-right: 8px;
+    opacity: 0;
+  }
+
+  90% {
+    margin-right: -0px;
+    opacity: 1;
+  }
+
+  100% {
+    margin-right: -5px;
+    opacity: 0;
+  }
 }

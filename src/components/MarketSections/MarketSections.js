@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import RangeSlider from "./RangeSlider";
 import "./MarketSections.css";
 // import Slider1 from './Slider1';
@@ -6,8 +6,21 @@ import a1 from "./Images1/a1.PNG";
 import a2 from "./Images1/a2.PNG";
 import a3 from "./Images1/a3.PNG";
 
-class MarketSections extends Component {
-  render() {
+export default function MarketSections () {
+    const indicatorList = [
+      {
+        id: "indicator_1"
+      },
+      {
+        id: "indicator_2"
+      },
+      {
+        id: "indicator_3"
+      }
+    ]
+    const indicators = indicatorList.map((indicator) =>
+      <li key={ indicator.id} className="indicator">1</li>
+    );
     return (
       <div className="MarketSections">
         <div className="Slider1">
@@ -30,6 +43,9 @@ class MarketSections extends Component {
               <img src={a3} alt="Images3" />
             </div>
           </figure>
+          <ul className="indicatorContainer">
+          { indicators }
+          </ul>
         </div>
         <div className="paid">
         <h2>Paid to Put You First</h2>
@@ -39,7 +55,5 @@ class MarketSections extends Component {
         <div className="Slider2" />
       </div>
     );
-  }
 }
 
-export default MarketSections;

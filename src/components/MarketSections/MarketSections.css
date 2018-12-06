@@ -46,6 +46,15 @@
   width: 300px;
 }
 
+.indicatorContainer {
+  position: absolute;
+  top: 1200px;
+  left: 1500px;
+  z-index: 1;
+  background-color: black;
+  float: left;
+}
+
 .paid {
   text-align: center;
   min-width: 400px;

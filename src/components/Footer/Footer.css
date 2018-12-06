@@ -4,6 +4,12 @@ footer {
   padding: 10px;
 }
 
+footer .links {
+  column-width: auto;
+  column-count: 2;
+  column-gap: 20px;
+}
+
 svg.equal-housing{
   width: 18px;
   height: 18px;
