@@ -3,8 +3,23 @@
   background-color: #f2f2f2;
 }
 
+.savingsContainer {
+  text-align: center;
+}
+
 #sliderStatus {
   text-align: center;
+  width:500px;
+  margin: auto;
+}
+
+.min-price-label {
+  float: left;
+  
+}
+
+.max-price-label {
+  float: right;
 }
 
 .container {
