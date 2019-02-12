@@ -1,17 +1,82 @@
-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 10px;
+.footer {
+  display: block;
+  margin: 50px 0;
+  height: 100px;
+  /*grid-template-columns: 3fr 1fr 3fr;*/
 }
 
-footer .links {
+.footer .links {
+  display: block;
+  float: left;
   column-width: auto;
-  column-count: 2;
+  column-count: 3;
   column-gap: 20px;
+  width: 42%;
+  padding-left: 7%;
+}
+
+.links a {
+  text-decoration: none;
+  font-size: 12px;
+  color: rgb(153, 153, 153);
 }
 
 svg.equal-housing{
   width: 18px;
   height: 18px;
   margin-right: 5px;
+}
+
+.links, .social, .legal {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.footer .social {
+  display: block;
+  float: left;
+  width: 16%;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+.social ul {
+  list-style: none;
+}
+
+.social li {
+  display: inline-block;
+  width: 26px;
+  height: 20px;
+}
+
+.social i {
+  color: rgb(153, 153, 153);
+}
+
+.countrySelector {
+  margin-top: 20px;
+}
+
+.countrySelector p {
+  font-size: 12px;
+  color: rgb(153, 153, 153);
+  padding: 5px;
+}
+
+.flag {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.footer .legal {
+  display: block;
+  float: left;
+  width: 42%;
+}
+
+.legal p{
+  font-size: 12px;
+  color: rgb(153, 153, 153);
 }

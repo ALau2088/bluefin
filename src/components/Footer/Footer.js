@@ -3,7 +3,7 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer>
+    <div className="footer">
       <div className="links">
       <div>
         <a href="/">About</a>
@@ -47,6 +47,11 @@ export default function Footer() {
         <li><a href="/"><i className="fab fa-pinterest fa-1x"/></a></li>
         <li><a href="/"><i className="fab fa-instagram fa-1x"/></a></li>
       </ul>
+      <div className="countrySelector">
+      <p className="country">Countries</p>
+      <p className="country"><span><img class="flag" src="https://ssl.cdn-redfin.com/v248.4.0/images/footer/flags/united-states.png" alt="US flag"/>United States</span></p>
+      <p className="country"><span><img class="flag" src="https://ssl.cdn-redfin.com/v248.4.0/images/footer/flags/canada.png" alt="Canadian flag"/>Canada</span></p>
+      </div>
       </div>
       <div className="legal">
       <p className="tou-pp">
@@ -66,6 +71,6 @@ export default function Footer() {
       <p className="trec">TREC: <a href="/">Info About Brokerage Services</a>, <a href="/">Consumer Protection Notice</a></p>
       <p className="help-reading">If you are using a screen reader, or having trouble reading this website, please call Redfin Customer Support for help at <a href="/">1-844-759-7732</a>.</p>
       </div>
-    </footer>
+    </div>
   );
 }
